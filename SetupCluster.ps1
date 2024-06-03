@@ -1,5 +1,5 @@
 $secpasswd = ConvertTo-SecureString "Pass@@word2024" -AsPlainText -Force
-$mycreds = New-Object System.Management.Automation.PSCredential ("azureadmin@contoso.local", $secpasswd)
+$mycreds = New-Object System.Management.Automation.PSCredential ("contoso\azureadmin", $secpasswd)
 
 Invoke-Command -ComputerName localhost -Credential $mycreds -ScriptBlock {
     # Your commands here
